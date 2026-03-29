@@ -106,7 +106,7 @@ storage/
 
 1. Cloner le projet
 
-git clone https://github.com/ton-repo/nateracure-api
+git clone [https://github.com/ton-repo/naturacure-api](https://github.com/HafizAdib/naturacure-api)
 
 2. Accéder au dossier
 
