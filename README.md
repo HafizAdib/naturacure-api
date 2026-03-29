@@ -1,59 +1,231 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌐 NaTéraCure API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Backend API de l’application **NaTéraCure (Nature Thérapeutique Cure)**, développé avec Laravel.
 
-## About Laravel
+Cette API permet de gérer les utilisateurs, les produits thérapeutiques traditionnels, les interactions sociales (likes, commentaires) ainsi que les contenus multimédias (images et vidéos).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Objectifs
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Centraliser les données thérapeutiques traditionnelles
+* Fournir une API sécurisée pour l’application mobile
+* Gérer les interactions utilisateurs
+* Assurer la validation et la modération des contenus
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🚀 Fonctionnalités principales
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🔐 Authentification
 
-## Laravel Sponsors
+* Inscription (Register)
+* Connexion (Login)
+* Déconnexion (Logout)
+* Authentification via Laravel Sanctum
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+### 👤 Gestion des utilisateurs
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Création de compte
+* Gestion des profils
+* Attribution de rôles (Admin, Contributeur, Utilisateur)
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🌿 Produits thérapeutiques
 
-## Code of Conduct
+* CRUD (Créer, Lire, Modifier, Supprimer)
+* Informations :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+  * Nom
+  * Maladie traitée
+  * Ingrédients
+  * Préparation
+  * Posologie
+  * Précautions
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🎥 Gestion des médias
 
-## License
+* Upload d’images
+* Upload de vidéos
+* Association des médias aux produits
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+### ❤️ Interaction sociale
+
+* Like des produits
+* Commentaires
+* Historique des interactions
+
+---
+
+### 🔍 Recherche et filtrage
+
+* Recherche par nom
+* Recherche par maladie
+* Filtrage des produits
+
+---
+
+## 🛠️ Technologies utilisées
+
+* Laravel
+* PHP
+* MySQL
+* Laravel Sanctum (authentification API)
+* REST API
+
+---
+
+## 📂 Structure du projet
+
+app/
+├── Models/
+├── Http/
+│   ├── Controllers/
+│   ├── Middleware/
+
+routes/
+├── api.php
+
+database/
+├── migrations/
+├── seeders/
+
+storage/
+├── app/public
+
+---
+
+## ⚙️ Installation
+
+1. Cloner le projet
+
+git clone https://github.com/ton-repo/nateracure-api
+
+2. Accéder au dossier
+
+cd nateracure-api
+
+3. Installer les dépendances
+
+composer install
+
+4. Copier le fichier d’environnement
+
+cp .env.example .env
+
+5. Générer la clé
+
+php artisan key:generate
+
+---
+
+## 🗄️ Configuration base de données
+
+Modifier le fichier `.env` :
+
+DB_DATABASE=nateracure
+DB_USERNAME=root
+DB_PASSWORD=
+
+---
+
+## 🔄 Migration de la base de données
+
+php artisan migrate
+
+---
+
+## ▶️ Lancer le serveur
+
+php artisan serve
+
+---
+
+## 🔐 Configuration Sanctum
+
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+
+php artisan migrate
+
+---
+
+## 📡 Routes API principales
+
+| Méthode | Endpoint           | Description            |
+| ------- | ------------------ | ---------------------- |
+| POST    | /api/register      | Inscription            |
+| POST    | /api/login         | Connexion              |
+| POST    | /api/logout        | Déconnexion            |
+| GET     | /api/products      | Liste des produits     |
+| POST    | /api/products      | Ajouter un produit     |
+| PUT     | /api/products/{id} | Modifier               |
+| DELETE  | /api/products/{id} | Supprimer              |
+| POST    | /api/like          | Liker un produit       |
+| POST    | /api/comment       | Ajouter un commentaire |
+
+---
+
+## 📁 Gestion des fichiers
+
+Créer le lien symbolique pour accéder aux fichiers :
+
+php artisan storage:link
+
+Les fichiers seront accessibles via :
+
+/storage/...
+
+---
+
+## 🧪 Tests
+
+php artisan test
+
+---
+
+## 🔐 Sécurité
+
+* Validation des requêtes
+* Authentification via token
+* Protection contre les accès non autorisés
+* Filtrage des données
+
+---
+
+## ⚠️ Avertissement
+
+Les informations fournies par cette API sont à but informatif uniquement et ne remplacent pas un avis médical professionnel.
+
+---
+
+## 📌 Améliorations futures
+
+* Notifications en temps réel
+* WebSockets (chat en direct)
+* Système de notation
+* Dashboard administrateur
+* API versioning
+
+---
+
+## Auteurs
+
+Abdoul Halim Hafiz Adib
+Idrissou Bouba
+Ngah David Ulrich
+Ngathuessi Tagne Stéphane
+
+Projet académique du Developpement mobile
+
+---
+
+# 🌿 NaTéraCure
+
+### La puissance de la nature au service de la santé
