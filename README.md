@@ -144,7 +144,7 @@ php artisan migrate
 
 ## ▶️ Lancer le serveur
 
-php artisan serve
+php artisan serve -host=0.0.0.0
 
 ---
 
@@ -217,10 +217,10 @@ Les informations fournies par cette API sont à but informatif uniquement et ne 
 
 ## Auteurs
 
-Abdoul Halim Hafiz Adib
-Idrissou Bouba
-Ngah David Ulrich
-Ngathuessi Tagne Stéphane
+* Abdoul Halim Hafiz Adib
+* Idrissou Bouba
+* Ngah David Ulrich
+* Ngathuessi Tagne Stéphane
 
 Projet académique du Developpement mobile
 
