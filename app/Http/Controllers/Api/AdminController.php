@@ -16,6 +16,7 @@ class AdminController extends Controller
     {
         $remedes = Remede::with('maladie', 'user', 'etapes')
             ->where('status', 'attente')
+            ->orWhere('status', 'rejete')
             ->orderBy('created_at', 'desc')
             ->get();
 
