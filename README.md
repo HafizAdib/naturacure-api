@@ -1,6 +1,6 @@
-# 🌐 NaTéraCure API
+# 🌐 NaturaCure API
 
-Backend API de l’application **NaTéraCure (Nature Thérapeutique Cure)**, développé avec Laravel.
+Backend API de l’application **NaturaCure (Nature Thérapeutique Cure)**, développé avec Laravel.
 
 Cette API permet de gérer les utilisateurs, les produits thérapeutiques traditionnels, les interactions sociales (likes, commentaires) ainsi que les contenus multimédias (images et vidéos).
 
@@ -226,6 +226,6 @@ Projet académique du Developpement mobile
 
 ---
 
-# 🌿 NaTéraCure
+# 🌿 NaturaCure
 
 ### La puissance de la nature au service de la santé
